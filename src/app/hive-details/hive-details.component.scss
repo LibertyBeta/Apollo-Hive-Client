@@ -1,0 +1,40 @@
+@import '../shared/bonbons.scss';
+:host{
+  // width: 75rem;
+  flex:3;
+  padding: 2rem;
+}
+
+#bees{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#row-two{
+  display: flex;
+  app-queen{
+    background-color: yellow;
+    flex:2;
+    width: 75%!important;
+  }
+  #weather{
+
+    @extend .box;
+    padding-top: 1rem;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    .wi{
+      width: 100%;
+      font-size: 7rem;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.box-wrapper{
+  display: block;
+  @extend .box;
+}

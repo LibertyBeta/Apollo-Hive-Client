@@ -1,0 +1,13 @@
+@import '../shared/bonbons.scss';
+:host{
+  @extend .box;
+  text-align: left;
+  padding: 1rem;
+}
+
+ul{
+  list-style-type: none;
+  li{
+    padding-left: 1rem;
+  }
+}

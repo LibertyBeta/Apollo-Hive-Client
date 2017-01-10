@@ -1,0 +1,4 @@
+<section id="list">
+  <app-hive *ngFor="let hive of hives" [hive]=hive [ngClass]="{active: hive.id == focus}" >loading...</app-hive>
+</section>
+<router-outlet></router-outlet>
