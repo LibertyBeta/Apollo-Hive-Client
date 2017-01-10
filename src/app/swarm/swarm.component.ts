@@ -58,7 +58,7 @@ export class SwarmComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.subscribe(params => {
-      this.childWatcher.sendToParent(this.route.parent.component.name, params['id']);
+      this.childWatcher.sendToParent(this.route.parent.component.toString(), params['id']);
       this.hiveId.next(params['id'].toString());
       this.hiveIdStatic = params['id'].toString();
       console.log(this.hiveId);
@@ -81,12 +81,15 @@ export class SwarmComponent implements OnInit {
         id: this.hiveIdStatic
       }
     }
-    ).then((res)=>{
-      const { data } = res;
-      this.swarm.bees = data.purgeSwarm;
-    }).catch((error) => {
-      console.log('there was an error sending the query', error);
-    });
+    ).subscribe(
+      res=>{
+        const { data } = res;
+        this.swarm.bees = data.purgeSwarm;
+      },
+      err=>{
+        console.log('there was an error sending the query', err);
+      }
+    );
   }
 
 }

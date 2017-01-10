@@ -34,14 +34,14 @@ export class HiveListComponent implements OnInit {
 
       }
     })
-    .then(({ data }) => {
-      console.log(data);
-      console.log(typeof data);
-      this.hives = data.hives;
-    });
-
-
-
+    .subscribe(
+      res=>{
+        console.log(res);
+        console.log(typeof res);
+        this.hives = res.data.hives;
+      },
+      err=>{}
+    )
   }
 
   ngOnInit() {

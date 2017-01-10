@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
-import { HttpModule } from '@angular/http'
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 import { routing,appRoutingProviders } from './app.routing';
 import { ApolloModule, defaultApolloClient, ApolloQueryObservable } from 'angular2-apollo';
 import { AgmCoreModule, MapsAPILoader } from 'angular2-google-maps/core';
@@ -50,6 +51,7 @@ export function provideClient(): ApolloClient {
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAydQXFOoZCCIJ5yh-Bs57p9ula3ekAtOY"
     }),
+    MaterialModule.forRoot(),
     routing,
     BrowserModule,
     FormsModule,

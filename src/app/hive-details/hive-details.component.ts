@@ -94,7 +94,7 @@ export class HiveDetailsComponent implements OnInit {
   ngOnInit() {
 
       this.route.params.subscribe(params => {
-        this.childWatcher.sendToParent(this.route.parent.component.name, params['id']);
+        this.childWatcher.sendToParent(this.route.parent.component.toString(), params['id']);
         this.hiveId.next(params['id'].toString());
         console.log(this.hiveId);
       });
@@ -116,12 +116,15 @@ export class HiveDetailsComponent implements OnInit {
         id: this.hive.id
       }
     }
-    ).then((res)=>{
-      const { data } = res;
-      this.hive.bees = data.purgeSwarm;
-    }).catch((error) => {
-      console.log('there was an error sending the query', error);
-    });
+    ).subscribe(
+      (res)=>{
+        const { data } = res;
+        this.hive.bees = data.purgeSwarm;
+      },
+      (err)=>{
+        console.log('there was an error sending the query', err);
+      }
+    );
   }
 
 }

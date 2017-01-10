@@ -46,11 +46,15 @@ export class BeeBigComponent extends BeeComponent implements OnInit {
         id: this.bee.id
       }
     }
-    ).then((res)=>{
-      this.bee.id = "DEAD BEE";
-    }).catch((error) => {
-      console.log('there was an error sending the query', error);
-    });
+    ).subscribe(
+      res=>{
+        this.bee.id = "DEAD BEE";
+      },
+      err=>{
+        console.log(err);
+      }
+    )
+    
   }
 
 }
