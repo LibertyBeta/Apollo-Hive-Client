@@ -1,6 +1,11 @@
-  <h3>{{hive.name}}</h3>
-  <div class="controls">
-    <a [routerLink]="['',hive.id]">Summary</a>
-    <a [routerLink]="['',hive.id,'harvests']">Harvests</a>
-    <a [routerLink]="['',hive.id,'bees']">Bees</a>
-  </div>
+ <md-card> 
+  <!--<h3></h3>-->
+  <md-card-content>
+    {{hive.name}}
+  </md-card-content>
+  <md-card-actions>
+    <a [routerLink]="['',hive.id]" md-button>Summary</a>
+    <a [routerLink]="['',hive.id,'harvests']" md-button>Harvests</a>
+    <a [routerLink]="['',hive.id,'bees']" md-button>Bees</a>
+  </md-card-actions>
+</md-card>

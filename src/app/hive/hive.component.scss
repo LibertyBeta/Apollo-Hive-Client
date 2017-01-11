@@ -1,7 +1,9 @@
 @import '../shared/bonbons.scss';
 :host{
-  @extend .box;
-  width: 15rem;
+  // @extend .box;
+  // width: 15rem;
+
+  padding-bottom: 1rem;
 }
 
 .controls{
