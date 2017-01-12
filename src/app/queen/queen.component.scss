@@ -1,8 +1,8 @@
 @import '../shared/bonbons.scss';
 :host{
-  @extend .box;
+  // @extend .box;
   text-align: left;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 ul{

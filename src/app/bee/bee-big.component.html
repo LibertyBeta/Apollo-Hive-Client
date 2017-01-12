@@ -1,6 +1,8 @@
-<img [ngClass]="{'not-producing': !bee.producing}" src="assets/bee.svg"/>
-<div id="details">
-  <p>{{bee.id}}</p>
-  <p>{{bee.inceptDate}}</p>
-</div>
-<button (click)="killBee()">KILL BEE</button>
+<md-card>
+  <img [ngClass]="{'not-producing': !bee.producing}" src="assets/bee.svg"/>
+  <div id="details">
+    <p>{{bee.id}}</p>
+    <p>{{bee.inceptDate}}</p>
+  </div>
+  <button md-button (click)="killBee()">KILL BEE</button>
+</md-card>

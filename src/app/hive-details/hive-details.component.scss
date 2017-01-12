@@ -21,8 +21,8 @@
   }
   #weather{
 
-    @extend .box;
-    padding-top: 1rem;
+    // @extend .box;
+    margin: 1rem;
     flex:1;
     justify-content: center;
     align-items: center;

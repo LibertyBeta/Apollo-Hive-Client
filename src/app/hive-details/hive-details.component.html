@@ -7,14 +7,14 @@ Map:
 <div id="row-two">
 
   <app-queen [id]='queenId' [hiveName]='hive.name'>Loading...</app-queen>
-  <div id="weather">
+  <md-card id="weather">
     {{hive.weather.condition}}
 
     <i class="wi wi-forecast-io-{{hive.weather.coniditonString}}"></i>
     {{hive.weather.temperature}}
-  </div>
+  </md-card>
 </div>
-Bees:<button (click)="purgeSwarm()">Purge the Lazy Bees</button>
+Bees:<button md-button (click)="purgeSwarm()">Purge the Lazy Bees</button>
 <div id="bees">
   <app-bee  *ngFor="let bee of hive.bees" [bee]='bee'>Loading...</app-bee>
 </div>

@@ -49,7 +49,7 @@ export function provideClient(): ApolloClient {
   ],
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyAydQXFOoZCCIJ5yh-Bs57p9ula3ekAtOY"
+      apiKey: "AIzaSyAnFOUjzW62eQfLjhvC3s-WmMfiY_U3_hY"
     }),
     MaterialModule.forRoot(),
     routing,

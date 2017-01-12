@@ -1,8 +1,9 @@
 @import '../shared/bonbons.scss';
 :host{
 
-@extend .box;
+// @extend .box;
 
+  margin: 0.5rem;
 }
 
 img{

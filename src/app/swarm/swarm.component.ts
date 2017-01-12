@@ -58,7 +58,7 @@ export class SwarmComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.subscribe(params => {
-      this.childWatcher.sendToParent(this.route.parent.component.toString(), params['id']);
+      // this.childWatcher.sendToParent(this.route.parent.component.toString(), params['id']);
       this.hiveId.next(params['id'].toString());
       this.hiveIdStatic = params['id'].toString();
       console.log(this.hiveId);
